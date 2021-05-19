@@ -1,4 +1,5 @@
 import React from 'react'
+
 const SubEdit = (props) => {
     const {name, id} = props.sub
     return(
@@ -12,4 +13,4 @@ const SubEdit = (props) => {
         </div>
     )
 }
-export default SubEdit
+export default SubEdit 

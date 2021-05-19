@@ -1,13 +1,7 @@
 class TopicsController < ApplicationController
-  def index
-  end
+ before_action :set_subprivate
 
-  def show
-  end
-
-  def new
-  end
-
-  def edit
-  end
+ def set_sub
+  @sub = params[:sub_id]
+ end
 end

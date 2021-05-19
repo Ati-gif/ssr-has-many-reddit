@@ -1,6 +1,7 @@
 import React from "react";
 
 const Sub = (props) =>  {
+
     const { id, name, created_at } = props.sub;
     return (
       <>
@@ -12,5 +13,7 @@ const Sub = (props) =>  {
         <a href="/">back</a>
       </>
     );
+  
 }
+
 export default Sub

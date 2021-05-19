@@ -1,4 +1,5 @@
 import React from 'react'
+
 const TopicEdit = (props) => {
     const { sub } = props
     return(
@@ -9,4 +10,5 @@ const TopicEdit = (props) => {
         </div>
     )
 }
+
 export default TopicEdit

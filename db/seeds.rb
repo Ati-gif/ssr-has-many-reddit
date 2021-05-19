@@ -12,9 +12,9 @@ Topic.destroy_all
   x = Faker::Verb.simple_present
   y = Faker::Verb.ing_form
   z = Faker::Verb.base
-  s = Sub.create(name: "#{x} #{y} #{z}")
+  sub = Sub.create(name: "#{x} #{y} #{z}")
   4.times do
-    sub = Sub.topics.create(name: Faker::Verb.simple_present, body: Faker::Quote.famous_last_words)
+    sub.topics.create(name: Faker::Verb.simple_present, body: Faker::Quote.famous_last_words)
   end
 end
 puts "seeded #{Sub.all.size} Subs"

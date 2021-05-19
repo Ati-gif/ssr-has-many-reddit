@@ -1,4 +1,5 @@
 import React from 'react'
+
 const TopicNew = (props) => {
     const { sub } = props
     return(
@@ -9,4 +10,5 @@ const TopicNew = (props) => {
         </div>
     )
 }
+
 export default TopicNew

@@ -8,16 +8,30 @@ class SubsController < ApplicationController
       # @sub = Sub.find(params[:id]) done in before-action
       render component: "Sub", props: {sub: @sub}
   end
+
   def edit
       # @sub = Sub.find(params[:id]) done in before-action
-      render component: "SubEdit"
+      render component: "SubEdit", props: {sub: @sub}
   end
+
   def update
    # @sub = Sub.find(params[:id]) done in before-action
+   if @sub.update(sub_params)
+   else
   end
+
   def new
       render component: "SubNew"
   end
+
+def create
+  @sub = Sub.new(sub_params)
+  if(@sub.save)
+      redirect_to root_path
+  else
+  end
+end
+
   def destroy
       # @sub = Sub.find(params[:id]) done in before-action
     @sub.destroy
@@ -30,4 +44,9 @@ class SubsController < ApplicationController
   def set_sub
     @sub = Sub.find(params[:id])
   end
+end
+
+def  sub_params
+  params.require(:sub).permit(:name)
+end
 end

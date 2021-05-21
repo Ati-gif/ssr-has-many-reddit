@@ -4,8 +4,14 @@ Rails.application.routes.draw do
   root "subs#index"
 
   resources :subs do
-    resources :topics
+    resources :topics 
   end
+
+  resources :topics do
+    resources :comments
+  end
+
+  get '/all', to:'subs#all'
 
   get '/tacos', to:'subs#tacos'
 end
